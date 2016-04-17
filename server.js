@@ -4,7 +4,7 @@ var PORT = 3000;
 
 var middleware = {
 	requireAuthentication: function (req, res, next) {
-		console.log('private route hit at ' + new Date().toString());
+		console.log('private route hit at ... ' + new Date().toString());
 		next();
 		
 	},
