@@ -2,17 +2,10 @@ var express = require ('express');
 var app = express();
 var PORT = 3000;
 
-var middleware = {
-	requireAuthentication: function (req, res, next) {
-		console.log('private route hit at ... ' + new Date().toString());
-		next();
-		
-	},
-	logger: function (req, res, next) {
-		 console.log('Request: ' + req.method + ' ' + req.originalUrl + ' at ' + new Date().toString());
-		 next();
-	}
-};
+var middleware = require('./middleware.js');
+//For assignment to move the middleware code to a new file, I forgot the '.' in the 
+// the above string value and I forgot the module.exports = middleware code
+// in the new middleware.js file.
 
 app.use(middleware.logger);
 
