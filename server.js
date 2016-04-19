@@ -1,6 +1,8 @@
 var express = require ('express');
 var app = express();
 var PORT = process.env.PORT || 3000;
+//if we run the server.js locally it won't find the process.env.PORT so it will default
+//to the 3000 value via the or operator
 
 var middleware = require('./middleware.js');
 //For assignment to move the middleware code to a new file, I forgot the '.' in the 
